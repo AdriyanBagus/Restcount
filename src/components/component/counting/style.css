@@ -1,0 +1,32 @@
+h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.counting-container {
+  padding: 20px;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.count-box {
+  width: 27%;
+  padding: 20px;
+  background-color: #879392;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.count-box h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.count-box p {
+  font-size: 36px;
+  margin: 0;
+}

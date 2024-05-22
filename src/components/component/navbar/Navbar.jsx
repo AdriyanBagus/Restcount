@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SignedIn, SignedOut, UserButton, useClerk } from "@clerk/clerk-react";
-import "../styles/Header.css";
+import "./NavbarStyle.css";
 
 function SignUpButton() {
   const clerk = useClerk();
 
   const handleSignUp = () => {
     clerk.openSignUp({
-      afterSignUpUrl: '/count',  // URL setelah signup berhasil
+      afterSignUpUrl: '/home',  // URL setelah signup berhasil
     });
   };
 
@@ -24,7 +24,7 @@ function SignInButton() {
 
   const handleSignIn = () => {
     clerk.openSignIn({
-      afterSignInUrl: '/count',  // URL setelah signin berhasil
+      afterSignInUrl: '/home',  // URL setelah signin berhasil
     });
   };
 
@@ -43,7 +43,7 @@ function Header() {
       </div>
       <div className="navbar-center">
         <Link to="/" className="nav-link">Home</Link>
-        <Link to="/count" className="nav-link">Counting</Link>
+        <Link to="/home" className="nav-link">Counting</Link>
       </div>
       <div className="navbar-right">
         <SignedOut>
